@@ -2,11 +2,9 @@
 
 ### Require
 
-```
-node v10+
-```
+- node v10+
 
-Because package is build in nactive async/await
+Because package is build in native async/await
 
 ### Installation
 
