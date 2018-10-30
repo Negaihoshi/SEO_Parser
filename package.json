@@ -1,0 +1,28 @@
+{
+  "name": "simple-seo-parser",
+  "version": "1.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Negaihoshi/SEO_Parser.git"
+  },
+  "author": "e222et <e222et@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Negaihoshi/SEO_Parser/issues"
+  },
+  "homepage": "https://github.com/Negaihoshi/SEO_Parser#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-rc.1",
+    "chai": "^4.2.0",
+    "eslint": "^5.8.0"
+  }
+}
