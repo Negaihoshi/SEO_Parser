@@ -81,9 +81,9 @@ test("detect fail example", async t => {
 test("write to stream", async t => {
   new Parser.SEOParser()
     .fromReadStream("./example/example-pass.html")
-    .outputToStream("./seo-parse-result.json");
+    .outputToStream("./report/seo-parse-result.json");
 
-  let data = await fs.readFileSync("./seo-parse-result.json", "utf8");
+  let data = await fs.readFileSync("./report/seo-parse-result.json", "utf8");
   data = await JSON.parse(data);
 
   t.true(data.pass.img);

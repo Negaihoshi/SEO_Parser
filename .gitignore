@@ -61,3 +61,4 @@ typings/
 .next
 
 seo-parse-result.json
+report/seo-parse-result.json
