@@ -2,6 +2,7 @@ import test from "ava";
 import Parser from "../lib/parser";
 import RuleParser from "../lib/rule";
 import fs from "fs";
+import util from "util";
 
 test("detect pass example", async t => {
   let test = await new Parser.SEOParser()
@@ -78,12 +79,15 @@ test("detect fail example", async t => {
   t.false(test.pass.h1);
 });
 
-test.skip("write to stream", async t => {
-  new Parser.SEOParser()
+test("write to stream", async t => {
+  let path = "./seo-parse-result.json";
+  let test = await new Parser.SEOParser()
     .fromReadStream("./example/example-pass.html")
-    .outputToStream("./report/seo-parse-result.json");
+    .outputToFile(path);
 
-  let data = await fs.readFileSync("./report/seo-parse-result.json", "utf8");
+  const readFile = util.promisify(fs.readFile);
+  let data = await readFile(path, "utf8");
+
   data = await JSON.parse(data);
 
   t.true(data.pass.img);
