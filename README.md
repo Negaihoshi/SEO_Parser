@@ -1,4 +1,12 @@
-# SEO_Parser
+# simple seo parser [![Build Status](https://travis-ci.org/Negaihoshi/SEO_Parser.svg?branch=master)](https://travis-ci.org/Negaihoshi/SEO_Parser)
+
+### Require
+
+```
+node v10+
+```
+
+Because package is build in nactive async/await
 
 ### Installation
 

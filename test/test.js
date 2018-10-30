@@ -78,7 +78,7 @@ test("detect fail example", async t => {
   t.false(test.pass.h1);
 });
 
-test("write to stream", async t => {
+test.skip("write to stream", async t => {
   new Parser.SEOParser()
     .fromReadStream("./example/example-pass.html")
     .outputToStream("./report/seo-parse-result.json");
